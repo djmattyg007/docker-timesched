@@ -29,4 +29,4 @@ You can opt out of HTTP or HTTPS by not supplying the relevant environment varia
 Connect to the site using the domain you specified above for the relevant protocol. Example:
 
 http://www.myexampletimesched.com
-http://secure.myexampletimesched.com
+https://secure.myexampletimesched.com
