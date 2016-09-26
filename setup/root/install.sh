@@ -6,9 +6,11 @@ set -e
 source /root/functions.sh
 
 # Install any packages
+echo "Installing nginx..."
 pacman -S --noconfirm nginx
 
-curl -sS --create-dirs -o /tmp/timesched/timesched.tar.gz https://github.com/djmattyg007/timesched/releases/download/djcustom-v${TIMESCHED_VERSION}/djcustom-v${TIMESCHED_VERSION}-release.tar.gz
+echo "Downloading timesched v${TIMESCHED_VERSION} tarball"
+curl -L -sS --create-dirs -o /tmp/timesched/timesched.tar.gz https://github.com/djmattyg007/timesched/releases/download/djcustom-v${TIMESCHED_VERSION}/djcustom-v${TIMESCHED_VERSION}-release.tar.gz
 cd /tmp/timesched
 tar xzf timesched.tar.gz
 rm timesched.tar.gz
