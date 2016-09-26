@@ -1,12 +1,15 @@
 FROM djmattyg007/arch-runit-base:2016.09.26-1
 MAINTAINER djmattyg007
 
-ENV TIMESCHEDIMAGE_VERSION=2016.09.27-1
+ENV TIMESCHEDIMAGE_VERSION=2016.09.27-2
 
 # Add install bash script
 COPY setup/root/*.sh /root/
+# Add runit init script
 COPY setup/init.sh /etc/service/nginx/run
+# Add nginx server block files and templates
 COPY setup/*.ngx /etc/timesched/nginx/
+# Add main nginx config file
 COPY setup/nginx.custom.conf /etc/nginx/
 
 ENV TIMESCHED_VERSION=1
