@@ -19,7 +19,7 @@ cd /tmp/timesched
 tar xzf timesched.tar.gz
 rm timesched.tar.gz
 cp -R release /data
-chmod -R -w /data
+chmod -R -w /data && chmod -R a+rX /data
 cd /
 
 # Cleanup
