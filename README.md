@@ -15,6 +15,7 @@ This uses a custom build from a fork of the timesched repository from mitsuhiko.
 docker run -d \
     --net="host" \
     --name=<container name> \
+    -v /etc/localtime:/etc/localtime \
     -v <path to SSL certificate files>:/etc/nginx/ssl \
     -e TIMESCHED_HTTP_SERVERNAME=<domain for HTTP endpoint> \
     -e TIMESCHED_HTTPS_SERVERNAME=<domain for HTTPS endpoint> \
